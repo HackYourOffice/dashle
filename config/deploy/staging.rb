@@ -4,3 +4,4 @@
 # You can define all roles on a single server, or split them:
 
 server "10.0.20.157", user: "dashle", roles: %w{app db web}
+set :rails_env, 'development'
