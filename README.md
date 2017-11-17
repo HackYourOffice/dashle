@@ -1,24 +1,35 @@
-# README
+# Dashle
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Development setup
 
-Things you may want to cover:
+__Dashle__ is developed as a [Ruby on Rails](http://rubyonrails.org) application.
+Currently it uses Rails 5.1.x, which requires you to have the following installed:
 
-* Ruby version
+* [Ruby 2.2+](http://ruby-lang.org)
+* [Ruby Bundler](http://bundler.io)
 
-* System dependencies
+To get started, clone this repository and install the needed dependencies:
 
-* Configuration
+```bash
+$ git clone git@github.com:HackYourOffice/dashle.git
+$ cd dashle
+$ bundle install
+```
 
-* Database creation
+Running the server for local development is easy as well:
 
-* Database initialization
+```bash
+$ bin/rails server
+```
 
-* How to run the test suite
+# Deployment
 
-* Services (job queues, cache servers, search engines, etc.)
+We use [Capistrano](http://capistranorb.com) for deployment. If you already installed
+the dependencies as described above, deploying the test installation is easy:
 
-* Deployment instructions
-
-* ...
+```bash
+# Make sure you have pushed your changes to the repository
+$ git push
+# Deploy and you will be asked which branch (defaults to current)
+$ cap staging deploy
+```
