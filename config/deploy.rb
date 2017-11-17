@@ -2,7 +2,8 @@
 lock "~> 3.10.0"
 
 set :application, "dashle"
-set :repo_url, "git@github.com:HackYourOffice/dashle.git"
+#set :repo_url, "git@github.com:HackYourOffice/dashle.git"
+set :repo_url, "https://github.com/HackYourOffice/dashle.git"
 
 # Default branch is :master
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
