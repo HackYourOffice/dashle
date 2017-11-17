@@ -6,7 +6,7 @@ class UrlChannel < ApplicationCable::Channel
   }
   
   def subscribed
-    stream_from "urls"
+    stream_from "urls_#{params['topic']}"
     transmit({:url => determine_initial_url(params['topic'])})
   end
 
