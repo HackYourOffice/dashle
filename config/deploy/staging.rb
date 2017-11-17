@@ -5,3 +5,4 @@
 
 server "10.0.20.157", user: "dashle", roles: %w{app db web}
 set :rails_env, 'development'
+set :bundle_without, %w{test}.join(' ')
