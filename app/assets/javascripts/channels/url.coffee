@@ -1,4 +1,7 @@
-App.url = App.cable.subscriptions.create "UrlChannel",
+
+topic = document.location.hash
+
+App.url = App.cable.subscriptions.create {channel: "UrlChannel", topic: topic},
   connected: ->
     console.log("Connected")
     # Called when the subscription is ready for use on the server
