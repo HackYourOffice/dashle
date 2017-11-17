@@ -1,0 +1,6 @@
+<%= bootstrap_form_for(@topic, layout: :horizontal, inline_errors: false, label_col: "col-sm-2", control_col: "col-sm-4") do |f| %>
+    <%= f.alert_message "Please fix the errors below." %>
+    <%= f.text_field :name, prepend: '#' %>
+    <%= f.text_area :urls_string, placeholder: "Add URLs…" %>
+    <%= f.submit %>
+<% end %>
