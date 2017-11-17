@@ -4,6 +4,8 @@ class DashboardsController < ApplicationController
 
   def load
     logger.info(params)
-    ActionCable.server.broadcast("urls_#{params[:topic]}", url: params[:url])
+    
+    UrlChannel.set_url_for_topic(params[:topic], params[:url])
+    # ActionCable.server.broadcast("urls_#{params[:topic]}", url: params[:url])
   end
 end
