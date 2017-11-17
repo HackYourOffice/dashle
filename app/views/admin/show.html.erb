@@ -5,7 +5,9 @@
         <option value="<%= topic %>"><%= topic %></option>
     <% end %>
   </select>
-  <input type="submit" value="Laden"/><br/>
+  <input type="submit" value="Laden" name="edit_topic"/>
+  <input type="submit" value="Löschen" name="del_topic"/>
+  <br/>
   <input type="text" name="new_topic_name"/>
-  <input type="submit" value="Neues Topic hinzufügen"/>
+  <input type="submit" value="Neues Topic hinzufügen" name="add_topic"/>
 </form>

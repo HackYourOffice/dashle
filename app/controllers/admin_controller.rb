@@ -3,17 +3,19 @@ class AdminController < ApplicationController
   end
 
   def modify
-    if parameter_isset('new_topic_name')
-      # topics.add(params['new_topic_name'])
-      logger.info("New topic: " + params['new_topic_name'])
-    elsif parameter_isset('selection')
-      # show urls section
+    @selected_topic = ''
+    @message = ''
+    if isset('add_topic')
+      @message = 'Add topic: ' + params['new_topic_name']
+    elsif isset('edit_topic')
       logger.info("Open details for: " + params['selection'])
       @selected_topic = params['selection']
+    elsif isset('del_topic')
+      @message = 'Warum löscht du das topic man'
     end
   end
 
-  def parameter_isset(param)
-    defined? param and params[param] != ''
+  def isset(param)
+    !params[param].nil?
   end
 end

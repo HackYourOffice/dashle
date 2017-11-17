@@ -1,4 +1,4 @@
-
+<h1><%= @message %></h1>
 <h1>URLs</h1>
 <form action="admin" method="post">
   <select multiple="true" name="urls">
@@ -6,7 +6,7 @@
         <option value="<%= url %>"><%= url %></option>
     <% end %>
   </select>
-  <input type="submit" value="Entfernen" name="del" />
+  <input type="submit" value="Entfernen" name="del_url" />
   <input type="text" />
-  <input type="submit" value="Hinzufügen" name="add" />
+  <input type="submit" value="Hinzufügen" name="add_url" />
 </form>
