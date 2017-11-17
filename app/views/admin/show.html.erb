@@ -1,0 +1,15 @@
+<!-- mock: -->
+<%
+  topics = ['', 'Cats', 'Dashboards', 'Presentation']
+  urls = ['http://dashboard.com', 'http://catpics.org/random', 'http://crashchrome.com']
+%>
+
+<h1>Topics</h1>
+<form action="admin" method="post">
+  <select name="selection">
+    <% topics.each do |topic| %>
+        <option value="<%= topic.downcase %>"><%= topic %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Laden" />
+</form>

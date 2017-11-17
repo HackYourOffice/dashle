@@ -1,0 +1,16 @@
+<%
+  topics = ['', 'Cats', 'Dashboards', 'Presentation']
+  urls = ['http://dashboard.com', 'http://catpics.org/random', 'http://crashchrome.com']
+%>
+
+<h1>URLs</h1>
+<form>
+  <select multiple="true" name="urls">
+    <% urls.each do |url| %>
+        <option value="<%= url.downcase %>"><%= url %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Entfernen" name="del" />
+  <input type="text" />
+  <input type="submit" value="Hinzufügen" name="add" />
+</form>
