@@ -22,6 +22,9 @@
           <%= link_to(topic, method: :delete, data: { confirm: "Are you sure you want to delete?\n\n#{topic.name}" }) do -%>
               <span class="glyphicon glyphicon-trash"></span>
           <% end %>
+          <%= link_to("/#{topic.name}") do -%>
+              <span class="glyphicon glyphicon-play"></span>
+          <% end %>
         </td>
       </tr>
     <% end %>
