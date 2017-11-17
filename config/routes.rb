@@ -3,9 +3,5 @@ Rails.application.routes.draw do
   root 'dashboards#show'
   post 'new_url' => 'dashboards#load'
 
-  get 'admin' => 'admin#show'
-
-  post 'admin' => 'admin#modify'
-
   resources :topics
 end
