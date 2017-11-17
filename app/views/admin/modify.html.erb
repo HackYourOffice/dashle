@@ -1,6 +1,6 @@
 <h1><%= @message %></h1>
 <h1>URLs</h1>
-<form action="admin" method="post">
+<form action="/admin" method="post">
   <select multiple="true" name="urls">
     <% all_topics[@selected_topic].each do |url| %>
         <option value="<%= url %>"><%= url %></option>
