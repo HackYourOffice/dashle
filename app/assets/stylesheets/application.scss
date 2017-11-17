@@ -12,3 +12,9 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#main {
+  margin-top: ($navbar-height + $navbar-margin-bottom);
+}
