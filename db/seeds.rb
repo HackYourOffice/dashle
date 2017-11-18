@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Topic.create({ name: '#cat', urls: ['http://placekitten.com/g/400/200', 'http://placekitten.com/g/400/400']}) 
-Topic.create({ name: '#', urls: ['http://example.com']})
+Topic.create({ name: '#', urls: ['/noTopic.html']})

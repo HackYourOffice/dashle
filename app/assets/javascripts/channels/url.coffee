@@ -5,7 +5,7 @@ nextIframe = 0;
 
 App.url = App.cable.subscriptions.create {channel: "UrlChannel", topic: topic},
   connected: ->
-    console.log("Connected")
+    console.log("Connected to Topic: " + topic)
     # Called when the subscription is ready for use on the server
 
   disconnected: ->

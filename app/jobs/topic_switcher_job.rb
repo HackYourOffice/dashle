@@ -4,6 +4,5 @@ class TopicSwitcherJob < ApplicationJob
   def perform(*args)
     thread_status = args[0]
     UrlChannel.get_topic_status_from_db(thread_status[:topic_name], thread_status[:index] + 1)
-    UrlChannel.inform_clients(thread_status[:topic_name])
   end
 end
