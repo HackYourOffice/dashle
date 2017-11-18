@@ -1,6 +1,8 @@
 
 topic = document.location.hash
 
+nextIframe = 0;
+
 App.url = App.cable.subscriptions.create {channel: "UrlChannel", topic: topic},
   connected: ->
     console.log("Connected")
@@ -13,4 +15,15 @@ App.url = App.cable.subscriptions.create {channel: "UrlChannel", topic: topic},
   received: (data) ->
     console.log(data)
     # Called when there's incoming data on the websocket for this channel
-    $("#url_frame").attr('src', data['url'])
+    loadNextIfram(data['url'])
+
+loadNextIfram = (url) ->
+  currentIndex = nextIframe
+  nextIframe++
+  if nextIframe > 1
+    nextIframe = 0
+  $("#url_frame_" + currentIndex).attr('src', url)
+  $("#url_frame_" + currentIndex).on("load", () ->
+    $("#url_frame_" + currentIndex).show();
+    $("#url_frame_" + nextIframe).hide();
+  )
