@@ -9,5 +9,5 @@ server fetch(:dashle_server, 'dashle'),
        user: fetch(:dashle_user, 'dashle'),
        roles: %w{app db web}
 
-set :rails_env, 'development'
+set :rails_env, 'production'
 set :bundle_without, %w{test}.join(' ')
