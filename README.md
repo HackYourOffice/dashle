@@ -19,6 +19,8 @@ $ bundle install
 Running the server for local development is easy as well:
 
 ```bash
+$ bin/rails db:migrate
+$ bin/rails db:seed
 $ bin/rails server
 ```
 
