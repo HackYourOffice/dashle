@@ -13,4 +13,4 @@ App.url = App.cable.subscriptions.create {channel: "UrlChannel", topic: topic},
   received: (data) ->
     console.log(data)
     # Called when there's incoming data on the websocket for this channel
-    Rails.$("#url_frame")[0].src = data['url']
+    $("#url_frame").attr('src', data['url'])

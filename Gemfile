@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bootstrap_form', '~> 2.7.0'
 
+# Add jQuery
+gem 'jquery-rails', '~> 4.3.1'
+
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
 gem 'capistrano3-puma' , group: :development
