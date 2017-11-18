@@ -11,4 +11,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-# Rails.application.config.assets.precompile += %w( admin.js admin.css )
+#
+# WARNING: When adding Rails components (views, cables, …) with custom CSS/JS requirements,
+#          don't add them to the top-level `application.*` files, but list them here explicitly.
+Rails.application.config.assets.precompile += %w( dashboards.js dashboards.css )
