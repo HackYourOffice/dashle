@@ -1,5 +1,12 @@
 # Dashle
 
+__Dashle__ is a dashboard framework, which aims to bring back the concepts from the now
+unmaintained [Dashing](http://github.com/dashing-io/dashing) project and focus on a code
+base that makes use of popular & active Ruby frameworks.
+
+It was conceived during a collaborative [hackathon](https://github.com/HackYourOffice) by
+[dm](http://dm.de) & [synyx GmbH & Co. KG](http://synyx.de).
+
 # Development setup
 
 __Dashle__ is developed as a [Ruby on Rails](http://rubyonrails.org) application.
