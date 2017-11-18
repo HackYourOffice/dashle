@@ -22,7 +22,7 @@ class UrlChannel < ApplicationCable::Channel
   def self.get_topic_status_from_db(topic_name, index = 0)
 
     url = if (topic = Topic.find_by_name(topic_name))
-            if topic.urls.size < index
+            if topic.urls.size <= index
               index = 0
             end
             topic.urls[index]
