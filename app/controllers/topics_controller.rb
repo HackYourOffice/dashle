@@ -1,6 +1,4 @@
 class TopicsController < ApplicationController
-  layout 'topics'
-
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics

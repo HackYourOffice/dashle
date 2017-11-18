@@ -1,4 +1,6 @@
 class DashboardsController < ApplicationController
+  layout 'bare'
+
   def show
   end
 
